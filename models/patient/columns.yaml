@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: Patient ID
+        searchable: true
+
+    name:
+        label: Patient Name
+        searchable: true
+
+    gender:
+        label: Gender
+        searchable: true
+
+    phone_no:
+        label: Phone Number
+        searchable: true

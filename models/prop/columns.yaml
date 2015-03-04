@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: Unique ID
+        searchable: true
+
+    type:
+        label: Type of Property
+        searchable: true
+
+    prop_id:
+        label: Property ID
+        searchable: true

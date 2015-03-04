@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Scan
+
+# Model Form Field configuration
+form: $/mohsin/mediscan/models/scan/fields.yaml
+
+# Model Class name
+modelClass: Mohsin\MediScan\Models\Scan
+
+# Default redirect location
+defaultRedirect: mohsin/mediscan/scan
+
+# Create page
+create:
+    title: Create Scan
+    redirect: mohsin/mediscan/scan/update/:id
+    redirectClose: mohsin/mediscan/scan
+
+# Update page
+update:
+    title: Edit Scan
+    redirect: mohsin/mediscan/scan
+    redirectClose: mohsin/mediscan/scan
+
+# Preview page
+preview:
+    title: Preview Scan

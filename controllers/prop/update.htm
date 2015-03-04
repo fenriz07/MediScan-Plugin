@@ -1,0 +1,42 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('mohsin/mediscan/prop') ?>">Prop</a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <?= Form::open(['class'=>'layout']) ?>
+
+        <div class="layout-row">
+            Prop ID: <?= $formModel -> original['id'] ?>
+        </div>
+
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <a href="<?= Backend::url('mohsin/mediscan/prop') ?>">
+                  <button
+                      type="button"
+                      class="btn btn-default">
+                      Go Back
+                  </button>
+                </a>
+                <button
+                    type="button"
+                    class="oc-icon-trash-o btn-icon danger pull-right"
+                    data-request="onDelete"
+                    data-load-indicator="Deleting Prop..."
+                    data-request-confirm="Do you really want to delete this prop?">
+                </button>
+            </div>
+        </div>
+
+    <?= Form::close() ?>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('mohsin/mediscan/prop') ?>" class="btn btn-default">Return to prop list</a></p>
+
+<?php endif ?>

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Prop
+
+# Model Form Field configuration
+form: $/mohsin/mediscan/models/prop/fields.yaml
+
+# Model Class name
+modelClass: Mohsin\MediScan\Models\Prop
+
+# Default redirect location
+defaultRedirect: mohsin/mediscan/prop
+
+# Create page
+create:
+    title: Create Prop
+    redirect: mohsin/mediscan/prop/update/:id
+    redirectClose: mohsin/mediscan/prop
+
+# Update page
+update:
+    title: Edit Prop
+    redirect: mohsin/mediscan/prop
+    redirectClose: mohsin/mediscan/prop
+
+# Preview page
+preview:
+    title: Preview Prop

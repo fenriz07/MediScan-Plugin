@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Patient Name
+
+    gender:
+        label: Gender
+        type: radio
+        default: male
+        options:
+            male: Male
+            female: Female
+
+    phone_no:
+        label: Phone Number
+        type: number
+        span: left

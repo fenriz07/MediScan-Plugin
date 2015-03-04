@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Patient
+
+# Model Form Field configuration
+form: $/mohsin/mediscan/models/patient/fields.yaml
+
+# Model Class name
+modelClass: Mohsin\MediScan\Models\Patient
+
+# Default redirect location
+defaultRedirect: mohsin/mediscan/patient
+
+# Create page
+create:
+    title: Create Patient
+    redirect: mohsin/mediscan/patient/update/:id
+    redirectClose: mohsin/mediscan/patient
+
+# Update page
+update:
+    title: Edit Patient
+    redirect: mohsin/mediscan/patient
+    redirectClose: mohsin/mediscan/patient
+
+# Preview page
+preview:
+    title: Preview Patient

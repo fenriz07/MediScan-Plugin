@@ -1,0 +1,8 @@
+1.0.1: First version of MediScan
+1.0.2:
+    - Added Props Table
+    - create_props_table.php
+    - Added Scans Table
+    - create_scans_table.php
+    - Added Patients Table
+    - create_patients_table.php

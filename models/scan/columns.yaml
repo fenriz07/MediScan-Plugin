@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: Scan ID
+        searchable: true
+
+    type:
+        label: Type
+        searchable: true
+
+    specs:
+        label: Specification
+        searchable: true
+
+    patient_id:
+        label: Patient
+        searchable: true

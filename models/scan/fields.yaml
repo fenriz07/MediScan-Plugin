@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    type:
+        label: Type
+        commentAbove: The type of scan such as CT Scan, MRI, etc.
+        type: dropdown
+
+    specs:
+        label: Specification
+        commentAbove: Such as Scan of the right humerus, X-ray of left knee, etc.
+
+    patient_id:
+        label: Patient
+        commentAbove: This patient who took this scan
+        type: dropdown
