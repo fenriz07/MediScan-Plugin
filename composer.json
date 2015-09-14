@@ -1,0 +1,15 @@
+{
+    "name": "mohsin/mediscan",
+    "description": "Medical prop repository",
+    "homepage": "http://tempestronics.com/projects/mediscan",
+    "keywords": ["octobercms", "prop","mediscan","qr"],
+    "authors": [
+        {
+            "name": "Saifur Rahman Mohsin",
+            "email": "mohsin92@me.com"
+        }
+    ],
+    "require": {
+        "bacon/bacon-qr-code": "dev-master"
+    }
+}

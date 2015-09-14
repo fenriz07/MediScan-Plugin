@@ -1,3 +1,13 @@
+<?php
+$renderer = new \BaconQrCode\Renderer\Image\Png();
+$renderer->setHeight(512);
+$renderer->setWidth(512);
+$renderer->setMargin(0);
+$writer = new \BaconQrCode\Writer($renderer);
+$original_data = $formModel -> original['id'];
+$data = $writer->writeString($original_data);
+$data = "data:image/png;base64,".base64_encode($data);
+?>
 <?php Block::put('breadcrumb') ?>
     <ul>
         <li><a href="<?= Backend::url('mohsin/mediscan/prop') ?>">Prop</a></li>
@@ -10,7 +20,7 @@
     <?= Form::open(['class'=>'layout']) ?>
 
         <div class="layout-row">
-            Prop ID: <?= $formModel -> original['id'] ?>
+           <img alt="$original_data" title="$original_data" src="<?= $data ?>"/>
         </div>
 
         <div class="form-buttons">
