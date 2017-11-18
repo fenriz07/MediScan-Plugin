@@ -20,20 +20,17 @@ Route::get('/api', array('before' => 'auth.basic', function()
       return Auth::getUser();
 }));
 
-Route::get('/prop', array('before' => 'auth.basic', function()
+/*Thanks for example. 
+With this we force the ID as the mandatory and there is no 404*/
+Route::get('/prop/{id}', array('before' => 'auth.basic', function($id)
 {
-  if(!isset($_GET['id']))
-    return Response::json(array('result' => 'error', 'reason' => 'Id not specified' ), 200);
-  try {
-    $data = Prop::where('id','=',$_GET['id'])->get(['type','prop_id'])[0];
-  } catch (Exception $ex) {
-    return Response::json(array('result' => 'error', 'reason' => 'Invalid Prop' ), 200);
-  }
-  if($data != null)
-    return json_encode($data);
+      
+  $data = Prop::whereId($id)->get(['type','prop_id'])[0];
+  return json_encode($data);
+      
 }));
 
-Route::get('/patient', array('before' => 'auth.basic', function()
+Route::get('/patient/{id}', array('before' => 'auth.basic', function()
 {
   if(!isset($_GET['id']))
     return Response::json(array('result' => 'error', 'reason' => 'Id not specified' ), 200);
